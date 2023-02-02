@@ -10,7 +10,7 @@ export default function Header() {
       pt="90px"
       pb="198px"
       px="32px"
-      textAlign={["left", "center"]}
+      textAlign={"center"}
     >
       <Heading fontWeight="800" fontSize="48px">
         Simple pricing for your busiess
