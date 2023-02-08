@@ -1,24 +1,57 @@
 import React from "react";
-import { Flex, Box, Text, Heading, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Icon,
+  Text,
+  HStack,
+  Heading,
+  StackProps,
+  Button,
+  Stack,
+} from "@chakra-ui/react";
+import { CheckIcon } from "../icons/icon";
+
+export const ListItem = (props: StackProps) => {
+  const { children, ...rest } = props;
+  return (
+    <HStack as="li" spacing="20px" {...rest}>
+      <Icon as={CheckIcon} w="22px" h="22px" />
+      <Text>{children}</Text>
+    </HStack>
+  );
+};
 
 export default function Pricing() {
   return (
-    <Flex>
-      <Box bg="#F0EAFB" p="60px">
-        <Text fontSize="24px" fontWeight="800">
-          Premium PRO
-        </Text>
-        <Heading as="h3" mt="16px" fontSize="60px">
-          $329
-        </Heading>
-        <Text color="#171923" fontSize="18px" mt="8px" fontWeight="500">
-          Billed just once
-        </Text>
-        <Button colorScheme="purple" size="lg" w="282px" mt="24px">
-          Getting Started
-        </Button>
-      </Box>
-      <Box></Box>
-    </Flex>
+    <Box maxW="994px" margin="auto" mt="-256px">
+      <Flex>
+        <Box bg="#F0EAFB" p="60px">
+          <Text fontSize="24px" fontWeight="800">
+            Premium PRO
+          </Text>
+          <Heading as="h3" mt="16px" fontSize="60px">
+            $329
+          </Heading>
+          <Text color="#171923" fontSize="18px" mt="8px" fontWeight="500">
+            Billed just once
+          </Text>
+          <Button colorScheme="purple" size="lg" w="282px" mt="24px">
+            Getting Started
+          </Button>
+        </Box>
+        <Box p="60px" fontSize="18px" bg="white">
+          <Text textAlign="left">
+            Access these features when you get this pricing package business.
+          </Text>
+          <Stack as="ul" spacing="20px" pt="24px">
+            <ListItem>International calling and message API</ListItem>
+            <ListItem>International calling and message API</ListItem>
+            <ListItem>International calling and message API</ListItem>
+            <ListItem>International calling and message API</ListItem>
+          </Stack>
+        </Box>
+      </Flex>
+    </Box>
   );
 }
