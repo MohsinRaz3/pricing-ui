@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Flex,
   Box,
@@ -24,7 +25,14 @@ export const ListItem = (props: StackProps) => {
 
 export default function Pricing() {
   return (
-    <Box maxW="994px" margin="auto" mt="-256px">
+    <Box
+      maxW="994px"
+      margin="auto"
+      mt="-256px"
+      borderRadius="12px"
+      overflow="hidden"
+      boxShadow="0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)"
+    >
       <Flex>
         <Box bg="#F0EAFB" p="60px">
           <Text fontSize="24px" fontWeight="800">
@@ -46,9 +54,9 @@ export default function Pricing() {
           </Text>
           <Stack as="ul" spacing="20px" pt="24px">
             <ListItem>International calling and message API</ListItem>
-            <ListItem>International calling and message API</ListItem>
-            <ListItem>International calling and message API</ListItem>
-            <ListItem>International calling and message API</ListItem>
+            <ListItem> Additional phone numbers</ListItem>
+            <ListItem>Automated messages via Zapier</ListItem>
+            <ListItem>24/7 support and consulting</ListItem>
           </Stack>
         </Box>
       </Flex>
